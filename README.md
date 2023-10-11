@@ -93,22 +93,22 @@ flowchart TB
   8 --> 9(9. Display results in list)
 ```
 
-1. (a) Get current location on Google Maps, convert to coordinates
-1. (b) Pick a location on Google Maps, convert to coordinates
-1. (c) Choose a city from a list, convert to coordinates
-2. Choose radius distance (or fall back to a default value)
-3. Create a [`LatLng` object](https://developers.google.com/maps/documentation/javascript/reference/coordinates#LatLng) from the coordinates
-4. Create a [`PlaceSearchRequest`](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceSearchRequest) w/ these properties:
+- (a) Get current location on Google Maps, convert to coordinates
+- (b) Pick a location on Google Maps, convert to coordinates
+- (c) Choose a city from a list, convert to coordinates
+- Choose radius distance (or fall back to a default value)
+- Create a [`LatLng` object](https://developers.google.com/maps/documentation/javascript/reference/coordinates#LatLng) from the coordinates
+- Create a [`PlaceSearchRequest`](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceSearchRequest) w/ these properties:
     - `language`: "sv" ([supported languages](https://developers.google.com/maps/faq#languagesupport))
     - `location`: The `LatLng` object
     - `radius`: Radius (in meters)
     - `rankBy`: RankBy.DISTANCE (get closer places first)
     - `type`: "restaurant"
-5. Use the Google Maps API [`nearbySearch`](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlacesService.nearbySearch) endpoint and send the created `PlaceSearchRequest`
-6. Get a response with a callback for getting an array of [`PlaceResult` objects](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceResult)
-7. For each PlaceResult, get the [`website`](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceResult.website) property
-8. Crawl the restaurant website and using some kind of reasonable algorithm, try to find if there is a "Dagens Lunch", get and save the data
-9. Display the information (Dagens lunch, restaurant name, link, address, etc.) in a list on the website. Almost all this information can be taken from the `PlaceResult` object
+- Use the Google Maps API [`nearbySearch`](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlacesService.nearbySearch) endpoint and send the created `PlaceSearchRequest`
+- Get a response with a callback for getting an array of [`PlaceResult` objects](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceResult)
+- For each PlaceResult, get the [`website`](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceResult.website) property
+- Crawl the restaurant website and using some kind of reasonable algorithm, try to find if there is a "Dagens Lunch", get and save the data
+- Display the information ("Dagens lunch", restaurant name, link, address, etc.) in a list on the website. Almost all this information can be taken from the `PlaceResult` object
 
 ### Regarding caching/saving data
 - I should figure out how we can we cache/save data so that we can:
