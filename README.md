@@ -67,7 +67,7 @@ Each item in the list should contain this information:
   - Seems abandoned  
   - Looks bad aesthetically
 
-### Unique Selling Points (USPs)
+### USPs for "dagenslunch.se" (patent pending...)
 - Automatic updating list thanks to Google Maps API + Website crawling
 - Simplicity + aesthetically pleasing (hopefully 🤞)
 - See restaurants close to you, easier to use
