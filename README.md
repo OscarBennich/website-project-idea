@@ -72,7 +72,7 @@ flowchart TB
   5 --> 6(Get an array of `PlaceResult`s)
   6 --> 7(Get website for each place)
   7 --> 8(Crawl website for "Dagens Lunch")
-  8 --> 9(Display 
+  8 --> 9(Display results)
 ```
 ### Regarding caching/saving data
 - I should figure out how we can we cache/save data so that we can:
