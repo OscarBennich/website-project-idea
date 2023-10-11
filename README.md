@@ -68,11 +68,14 @@ Each item in the list should contain this information:
   - Looks bad aesthetically
 
 ### USPs for "dagenslunch.se" (patent pending...)
-- Automatic updating list thanks to Google Maps API + Website crawling
-- Simplicity + aesthetically pleasing (hopefully 🤞)
-- See restaurants close to you, easier to use
-- (If possible) allows you to see "Dagens lunch" directly on the Website 
-- Would be possible to use in all of Sweden, not just Uppsala
+- Automation:
+  - **Automatic updating list thanks to Google Maps API + Website crawling**
+- User friendly:
+  - See restaurants close to you, easier to use
+  - (If possible) allows you to see "Dagens lunch" directly on the Website
+  - Simple design and aesthetically pleasing (hopefully 🤞)
+- Generally useful:
+  - Would be possible to use in all of Sweden, not just Uppsala
 
 ## Rough idea on how it could work
 ```mermaid
