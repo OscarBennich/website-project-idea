@@ -1,7 +1,7 @@
 # Website project idea
 A website to check for "Dagens lunch" (meal-of-the-day) for different restaurants near your location (in Sweden). This would be accomplished mainly through integrating with the Google Maps API.
 
-> Tagline: "Vad blir det till lunch?"
+> Tagline: "Vad blir det till lunch? 🍔"
 
 It should be possible to do this using:
 - (a) Your current location + a range
@@ -60,6 +60,19 @@ Each item in the list should contain this information:
 8. Crawl the restaurant website and using some kind of reasonable algorithm, try to find if there is a "Dagens Lunch", get and save the data
 9. Display the information (Dagens lunch, restaurant name, link, address, etc.) in a list on the website. Almost all this information can be taken from the `PlaceResult` object
 
+```mermaid
+
+```
+### Regarding caching/saving data
+- I should figure out how we can we cache/save data so that we can:
+- (a) Not have to make the expensive Google Maps API request
+- (b) Not have to do the resource intensive crawling of the restaurant websites
+ 
+### Extra
+- Give option to get directions directly to resturant:
+![image](https://github.com/OscarBennich/website-project-idea/assets/26872957/0d64600a-5791-4c55-9166-91d3737b4881)
+https://developers.google.com/maps/documentation/api-picker
+
 ## Google Maps API documentation
 ### Getting started
 - https://developers.google.com/maps/get-started
@@ -76,14 +89,29 @@ https://developers.google.com/maps/documentation/javascript/reference/places-ser
 - [PlaceSearchRequest](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceSearchRequest)
 - [Place types](https://developers.google.com/maps/documentation/places/web-service/supported_types#table1) (restaurant)
 - [Coordinates & the "LatLng" class](https://developers.google.com/maps/documentation/javascript/reference/coordinates#LatLng)
+- [Current Place](https://developers.google.com/maps/documentation/places/android-sdk/current-place)
 
-### Cost
+### How to calculate distance
+- https://cloud.google.com/blog/products/maps-platform/how-calculate-distances-map-maps-javascript-api
+
+### ⚠ Cost ⚠
+Because the "nearbySearch" feature spans all 3 Places Data SKUs, the price per 1000 requests will be $40:
+- Place - Nearby Search (price starting at 0.032 USD per call)
+- Basic Data (billed at 0.00 USD)
+- Contact Data (price starting at 0.003 USD per request)
+- Atmosphere Data (price starting at 0.005 USD per request)
+
+![image](https://github.com/OscarBennich/website-project-idea/assets/26872957/b8e98cd7-e4eb-4e39-b800-1bd538d4862f)
+
+https://developers.google.com/maps/documentation/places/web-service/usage-and-billing#nearby-search
+
+**This means that I can only make 5000 requests per month with the $200 of usage you get for free per month**
+
 - https://mapsplatform.google.com/pricing/
 
 ![image](https://github.com/OscarBennich/website-project-idea/assets/26872957/9e8a2e88-fd8f-49e8-b497-e1bd17b15bc2)
 https://developers.google.com/maps/documentation/places/web-service/usage-and-billing/#data-skus
 
 ## Domain name
-- https://se.godaddy.com/domainsearch/find?domainToCheck=dagenslunch
-
 ![image](https://github.com/OscarBennich/website-project-idea/assets/26872957/48a8c7b8-0aa5-4ada-8082-c2dc8952f6b7)
+- https://se.godaddy.com/domainsearch/find?domainToCheck=dagenslunch
