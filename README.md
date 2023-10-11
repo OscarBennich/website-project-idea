@@ -59,7 +59,7 @@ Each item in the list should contain this information:
   - It is NOT automatic but relies on manually adding restaurants and their menu
   - Almost none of the restaurants actually display the actual "Dagens Lunch" (which defeats the purpose...)
   - Looks bad aesthetically
-### [www.uppsalalunch.se](https://www.uppsalalunch.se/restauranger/)
+### [uppsalalunch.se](https://www.uppsalalunch.se/restauranger/)
 - 🟢 Pros
   - Contains a lot of restaurants and information (part of city, lunch opening hours, what is included in the lunch, 
 - 🔴 Cons
