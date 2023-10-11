@@ -80,17 +80,17 @@ Each item in the list should contain this information:
 ## Rough idea on how it could work
 ```mermaid
 flowchart TB
-  1a(Get current location)
-  1b(Pick a location)
-  1c(Choose a city)
-  1a & 1b & 1c --> 2(Choose radius)
-  2 --> 3(Create a `LatLng` object)
-  3 --> 4(Create a `PlaceSearchRequest`)
-  4 --> 5(Use the `nearbySearch` endpoint)
-  5 --> 6(Get an array of `PlaceResults`)
-  6 --> 7(Get website for each place)
-  7 --> 8(Crawl website for 'Dagens Lunch')
-  8 --> 9(Display results in list)
+  1a(1a. Get current location)
+  1b(1b. Pick a location)
+  1c(1c. Choose a city)
+  1a & 1b & 1c --> 2(2. Choose radius)
+  2 --> 3(3. Create a `LatLng` object)
+  3 --> 4(4. Create a `PlaceSearchRequest`)
+  4 --> 5(5. Use the `nearbySearch` endpoint)
+  5 --> 6(6. Get an array of `PlaceResults`)
+  6 --> 7(7. Get website for each place)
+  7 --> 8(8. Crawl website for 'Dagens Lunch')
+  8 --> 9(9. Display results in list)
 ```
 
 1. (a) Get current location on Google Maps, convert to coordinates
