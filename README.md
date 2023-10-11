@@ -1,5 +1,5 @@
 # Website project idea
-A website to check for "Dagens lunch" (meal-of-the-day) for different restaurants near your location (in Sweden). This would be accomplished mainly through integrating with the Google Maps API and then scraping the restaurant website.
+An idea for a website to check for "Dagens lunch" (meal-of-the-day) for different restaurants near your location (in Sweden). This would be accomplished mainly through integrating with the Google Maps API and then scraping the restaurant website.
 
 > Tagline: "Vad blir det till lunch? 🍔"
 
