@@ -30,6 +30,7 @@ Each item in the list should contain this information:
   - You can select the day of the week
 - 🔴 Cons
   - It is NOT automatic but relies on manually adding restaurants and their menu
+  - List only contains 2 restaurants...
 
 ### [kvartersmenyn.se](https://www.kvartersmenyn.se/)
 - 🟢 Pros
@@ -51,11 +52,20 @@ Each item in the list should contain this information:
 
 ### [lunchguidensverige.se](https://lunchguidensverige.se/)
 - 🟢 Pros
+  - Contains a lot of restaurants
+  - You can select the day of the week
 - 🔴 Cons
-
+  - You can only select the city from a list (it contains a map but you cannot search for nearby restaurants)
+  - It is NOT automatic but relies on manually adding restaurants and their menu
+  - Almost none of the restaurants actually display the actual "Dagens Lunch" (which defeats the purpose...)
+  - Looks bad aesthetically
 ### [www.uppsalalunch.se](https://www.uppsalalunch.se/restauranger/)
 - 🟢 Pros
+  - Contains a lot of restaurants and information (part of city, lunch opening hours, what is included in the lunch, 
 - 🔴 Cons
+  - It is NOT automatic but relies on manually adding restaurants and their menu
+  - Seems abandoned  
+  - Looks bad aesthetically
 
 ## Rough idea on how it could work
 ```mermaid
