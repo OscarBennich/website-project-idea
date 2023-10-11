@@ -24,7 +24,7 @@ Each item in the list should contain this information:
 ## Similar sites
 ### [lunchfindr.se](https://lunchfindr.se/)
 - 🟢 Pros
-  - Looks nice
+  - Looks nice aesthetically
   - Can use your position (Google Maps integration)
   - Displays "Dagens lunch" directly on the website
   - You can select the day of the week
