@@ -1,4 +1,4 @@
-![image](https://github.com/OscarBennich/website-project-idea/assets/26872957/2b7e65f2-dcbf-4438-a8e3-598f5612e235)# Website project idea
+# Website project idea
 A website to check for "Dagens lunch" (meal-of-the-day) for different restaurants near your location (in Sweden). This would be accomplished mainly through integrating with the Google Maps API.
 
 > Tagline: "Vad blir det till lunch?"
@@ -15,17 +15,32 @@ Each item in the list should contain this information:
 - The name and description of "Dagens lunch" (meal-of-the-day)
 - Distance (in meters)
 - Type of food/cuisine
+- Address
 - A link to the resturant website and/or menu
 - Opening hours
 - Rating
 - Price level?
 
 ## Similar sites
-- https://www.kvartersmenyn.se/
-- https://veckanslunch.se/
-- https://lunchguidensverige.se/
-- https://www.uppsalalunch.se/restauranger/
-- https://lunchfindr.se/
+### [lunchfindr.se](https://lunchfindr.se/)
+- 🟢 Pros
+- 🔴 Cons
+
+### [kvartersmenyn.se](https://www.kvartersmenyn.se/)
+- 🟢 Pros
+- 🔴 Cons
+
+### [veckanslunch.se](https://veckanslunch.se/)
+- 🟢 Pros
+- 🔴 Cons
+
+### [lunchguidensverige.se](https://lunchguidensverige.se/)
+- 🟢 Pros
+- 🔴 Cons
+
+### [www.uppsalalunch.se](https://www.uppsalalunch.se/restauranger/)
+- 🟢 Pros
+- 🔴 Cons
 
 ## Rough idea on how it would work
 1. (a) Get current location on Google Maps, convert to coordinates
@@ -34,10 +49,16 @@ Each item in the list should contain this information:
 2. Choose radius distance (or fall back to a default value)
 3. Create a [`LatLng` object](https://developers.google.com/maps/documentation/javascript/reference/coordinates#LatLng) from the coordinates
 4. Create a [`PlaceSearchRequest`](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceSearchRequest) w/ these properties:
-    - Language: "sv" ([supported languages](https://developers.google.com/maps/faq#languagesupport))
-    - Location: The `LatLng` object
-    - 
-5. Use the Google Maps API [nearbySearch](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlacesService.nearbySearch) endpoin 
+    - `language`: "sv" ([supported languages](https://developers.google.com/maps/faq#languagesupport))
+    - `location`: The `LatLng` object
+    - `radius`: Radius (in meters)
+    - `rankBy`: RankBy.DISTANCE (get closer places first)
+    - `type`: "restaurant"
+5. Use the Google Maps API [`nearbySearch`](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlacesService.nearbySearch) endpoint and send the created `PlaceSearchRequest`
+6. Get a response with a callback for getting an array of [`PlaceResult` objects](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceResult)
+7. For each PlaceResult, get the [`website`](https://developers.google.com/maps/documentation/javascript/reference/places-service#PlaceResult.website) property
+8. Crawl the restaurant website and using some kind of reasonable algorithm, try to find if there is a "Dagens Lunch", get and save the data
+9. Display the information (Dagens lunch, restaurant name, link, address, etc.) in a list on the website. Almost all this information can be taken from the `PlaceResult` object
 
 ## Google Maps API documentation
 ### Getting started
