@@ -42,7 +42,22 @@ Each item in the list should contain this information:
 - 🟢 Pros
 - 🔴 Cons
 
-## Rough idea on how it would work
+## Rough idea on how it could work
+```mermaid
+flowchart TB
+  1a(Get current location)
+  1b(Pick a location)
+  1c(Choose a city)
+  1a & 1b & 1c --> 2(Choose radius)
+  2 --> 3(Create a `LatLng` object)
+  3 --> 4(Create a `PlaceSearchRequest`)
+  4 --> 5(Use the `nearbySearch` endpoint)
+  5 --> 6(Get an array of `PlaceResults`)
+  6 --> 7(Get website for each place)
+  7 --> 8(Crawl website for 'Dagens Lunch')
+  8 --> 9(Display results in list)
+```
+
 1. (a) Get current location on Google Maps, convert to coordinates
 1. (b) Pick a location on Google Maps, convert to coordinates
 1. (c) Choose a city from a list, convert to coordinates
@@ -60,20 +75,6 @@ Each item in the list should contain this information:
 8. Crawl the restaurant website and using some kind of reasonable algorithm, try to find if there is a "Dagens Lunch", get and save the data
 9. Display the information (Dagens lunch, restaurant name, link, address, etc.) in a list on the website. Almost all this information can be taken from the `PlaceResult` object
 
-```mermaid
-flowchart TB
-  1a(Get current location)
-  1b(Pick a location)
-  1c(Choose a city)
-  1a & 1b & 1c --> 2(Choose radius)
-  2 --> 3(Create a `LatLng` object)
-  3 --> 4(Create a `PlaceSearchRequest`)
-  4 --> 5(Use the `nearbySearch` endpoint)
-  5 --> 6(Get an array of `PlaceResult`s)
-  6 --> 7(Get website for each place)
-  7 --> 8(Crawl website for "Dagens Lunch")
-  8 --> 9(Display results)
-```
 ### Regarding caching/saving data
 - I should figure out how we can we cache/save data so that we can:
 - (a) Not have to make the expensive Google Maps API request
