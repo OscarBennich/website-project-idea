@@ -24,15 +24,30 @@ Each item in the list should contain this information:
 ## Similar sites
 ### [lunchfindr.se](https://lunchfindr.se/)
 - 🟢 Pros
+  - Looks nice
+  - Can use your position (Google Maps integration)
+  - Displays "Dagens lunch" directly on the website
+  - You can select the day of the week
 - 🔴 Cons
+  - It is NOT automatic but relies on manually adding restaurants and their menu
 
 ### [kvartersmenyn.se](https://www.kvartersmenyn.se/)
 - 🟢 Pros
+  - Displays "Dagens lunch" directly on the website
+  - You can select the day of the week
 - 🔴 Cons
+  - You can only select the city from a list (it contains a map but you cannot search for nearby restaurants)
+  - It is NOT automatic but relies on manually adding restaurants and their menu
+  - Looks bad aesthetically
 
 ### [veckanslunch.se](https://veckanslunch.se/)
 - 🟢 Pros
+  - Looks nice(ish) aesthetically
 - 🔴 Cons
+  - It is NOT automatic but relies on manually adding restaurants and their menu
+  - You can only select the city by searching for it (you cannot search for nearby restaurants)
+     - The search also doesn't seem to work...?
+  - Seems abandoned  
 
 ### [lunchguidensverige.se](https://lunchguidensverige.se/)
 - 🟢 Pros
