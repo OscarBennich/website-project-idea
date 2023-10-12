@@ -69,7 +69,7 @@ Each item in the list should contain this information:
 
 ### USPs for "dagenslunch.se" (patent pending...)
 - Automation:
-  - **Automatic updating list thanks to Google Maps API + Website crawling**
+  - **Automatic updates of menu list thanks to Google Maps API + Website crawling**
 - User friendly:
   - See restaurants close to you, easier to use
   - (If possible) allows you to see "Dagens lunch" directly on the Website
